@@ -27,4 +27,8 @@ USE coffeeshop_db;
 --     (SUM(order_items.quantity) grouped by product_id).
 --     Then return only products whose total_units_sold is greater than the
 --     average total_units_sold across all products.
+<<<<<<< HEAD
 --     Return product_id, product_name, total_units_sold.
+=======
+--     Return product_id, product_name, total_units_sold.
+>>>>>>> upstream/main

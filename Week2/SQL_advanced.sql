@@ -101,4 +101,8 @@ USE coffeeshop_db;
 -- Then join inventory to that result and return rows where:
 --   on_hand < total_units_sold
 -- Return: store_name, product_name, on_hand, total_units_sold, units_gap (= total_units_sold - on_hand)
+<<<<<<< HEAD
 -- Sort by units_gap DESC.
+=======
+-- Sort by units_gap DESC.
+>>>>>>> upstream/main
