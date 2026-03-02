@@ -8,39 +8,38 @@ USE coffeeshop_db;
 -- --------------------------------------------
 CREATE TABLE customers (
   customer_id INT PRIMARY KEY AUTO_INCREMENT,
-  first_name  VARCHAR(50)  NOT NULL,
-  last_name   VARCHAR(50)  NOT NULL,
-  email       VARCHAR(100) NOT NULL UNIQUE,
-  city        VARCHAR(100),
-  state       VARCHAR(50)
-);
+  first_name  TEXT  NOT NULL,
+  last_name   TEXT  NOT NULL,
+  email       TEXT  NOT NULL UNIQUE,
+  city        TEXT ,
+  state       TEXT );
 
 CREATE TABLE stores (
   store_id INT PRIMARY KEY AUTO_INCREMENT,
-  name     VARCHAR(100) NOT NULL,
-  city     VARCHAR(100) NOT NULL,
-  state    VARCHAR(50)  NOT NULL
+  name     TEXT  NOT NULL,
+  city     TEXT  NOT NULL,
+  state    TEXT  NOT NULL
 );
 
 CREATE TABLE employees (
   employee_id INT PRIMARY KEY AUTO_INCREMENT,
   store_id    INT         NOT NULL,
-  first_name  VARCHAR(50) NOT NULL,
-  last_name   VARCHAR(50) NOT NULL,
-  title       VARCHAR(50) NOT NULL,
+  first_name  TEXT NOT NULL,
+  last_name   TEXT NOT NULL,
+  title       TEXT NOT NULL,
   hire_date   DATE        NOT NULL,
   FOREIGN KEY (store_id) REFERENCES stores(store_id)
 );
 
 CREATE TABLE categories (
   category_id INT PRIMARY KEY AUTO_INCREMENT,
-  name        VARCHAR(100) NOT NULL UNIQUE
+  name        TEXT  NOT NULL UNIQUE
 );
 
 CREATE TABLE products (
   product_id  INT PRIMARY KEY AUTO_INCREMENT,
   category_id INT          NOT NULL,
-  name        VARCHAR(100) NOT NULL UNIQUE,
+  name        TEXT  NOT NULL UNIQUE,
   price       DECIMAL(6,2) NOT NULL,
   FOREIGN KEY (category_id) REFERENCES categories(category_id)
 );
