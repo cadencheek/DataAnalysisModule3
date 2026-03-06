@@ -18,6 +18,8 @@ USE coffeeshop_db;
 -- for THAT SAME store (correlated subquery).
 -- Sort by store_name, then order_total DESC.
 
+
+
 -- =========================================================
 -- Q2) CTE: Daily revenue and 3-day rolling average (PAID only)
 -- =========================================================
@@ -28,6 +30,7 @@ USE coffeeshop_db;
 --   rolling_3day_avg = average of revenue_day over the current day and the prior 2 days.
 -- Use a window function for the rolling average.
 -- Sort by store_name, order_date.
+
 
 -- =========================================================
 -- Q3) Window function: Rank customers by lifetime spend (PAID only)
